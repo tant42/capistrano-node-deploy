@@ -56,6 +56,8 @@ author      "capistrano"
 start on runlevel [2345]
 stop on shutdown
 
+limit nofile 32768 32768
+
 respawn
 respawn limit 99 5
 kill timeout #{kill_timeout}
